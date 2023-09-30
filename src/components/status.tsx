@@ -1,7 +1,5 @@
-import { Box, Container, Grid, Paper, Typography } from '@mui/material';
+import { Box, Grid, Paper, Typography } from '@mui/material';
 import { shipmentData } from '../types/shipment.types';
-import Loading from './loading';
-import { useAppSelector } from '../app/hooks';
 import { useTranslation } from 'react-i18next';
 
 interface statusProps {

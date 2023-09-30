@@ -15,7 +15,8 @@ import { shipmentData } from '../types/shipment.types';
 import { useTranslation } from 'react-i18next';
 import { Box, Paper } from '@mui/material';
 
-const ColorlibConnector = styled(StepConnector)(({ theme }) => ({
+// eslint-disable-next-line no-empty-pattern
+const ColorlibConnector = styled(StepConnector)(({  }) => ({
   [`&.${stepConnectorClasses.alternativeLabel}`]: {
     top: 22,
   },
@@ -134,7 +135,7 @@ export default function Steppers({ shipmentData }: SteppersProps) {
           alternativeLabel
           activeStep={currentStep}
           connector={<ColorlibConnector />}>
-          {steps.map((label, index) => (
+          {steps.map((label) => (
             <Step key={label}>
               <StepLabel StepIconComponent={ColorlibStepIcon}>
                 {t(label)}

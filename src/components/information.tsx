@@ -11,7 +11,6 @@ import {
 	Typography,
 } from '@mui/material';
 import qustionImage from '../assets/undraw_questions_re_1fy7.svg'
-import React from 'react';
 import { useTranslation } from 'react-i18next';
 
 function Information() {
