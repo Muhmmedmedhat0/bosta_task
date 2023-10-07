@@ -14,10 +14,13 @@ import LocalShippingIcon from '@mui/icons-material/LocalShipping';
 import { shipmentData } from '../types/shipment.types';
 import { useTranslation } from 'react-i18next';
 import { Box, Paper } from '@mui/material';
-import StepContent from '@mui/material/StepContent';
 
 interface SteppersProps {
   shipmentData: shipmentData;
+}
+
+interface ColorlibConnectorProps {
+  shipmentData: shipmentData; 
 }
 
 export default function Steppers({ shipmentData }: SteppersProps) {
@@ -38,29 +41,30 @@ export default function Steppers({ shipmentData }: SteppersProps) {
   };
 
   // eslint-disable-next-line no-empty-pattern
-  const ColorlibConnector = styled(StepConnector)(({ shipmentData }) => ({
-    [`&.${stepConnectorClasses.alternativeLabel}`]: {
-      top: 22,
-    },
-    [`&.${stepConnectorClasses.active}`]: {
-      [`& .${stepConnectorClasses.line}`]: {
-        backgroundImage: 'none',
-        backgroundColor: getColorForState(shipmentData?.CurrentStatus?.state), // Use dynamic color
-        // edit direction on rtl
+  const ColorlibConnector = styled(StepConnector)<ColorlibConnectorProps>(
+    ({ shipmentData }) => ({
+      [`&.${stepConnectorClasses.alternativeLabel}`]: {
+        top: 22,
       },
-    },
-    [`&.${stepConnectorClasses.completed}`]: {
-      [`& .${stepConnectorClasses.line}`]: {
-        backgroundImage: 'none',
-        backgroundColor: getColorForState(shipmentData?.CurrentStatus?.state), // Use dynamic color
+      [`&.${stepConnectorClasses.active}`]: {
+        [`& .${stepConnectorClasses.line}`]: {
+          backgroundImage: 'none',
+          backgroundColor: getColorForState(shipmentData?.CurrentStatus?.state),
+        },
       },
-    },
-    [`& .${stepConnectorClasses.line}`]: {
-      height: 4,
-      border: 0,
-      borderRadius: 1,
-    },
-  }));
+      [`&.${stepConnectorClasses.completed}`]: {
+        [`& .${stepConnectorClasses.line}`]: {
+          backgroundImage: 'none',
+          backgroundColor: getColorForState(shipmentData?.CurrentStatus?.state),
+        },
+      },
+      [`& .${stepConnectorClasses.line}`]: {
+        height: 4,
+        border: 0,
+        borderRadius: 1,
+      },
+    })
+  );
 
   const ColorlibStepIconRoot = styled('div')<{
     ownerState: { completed?: boolean; active?: boolean };
