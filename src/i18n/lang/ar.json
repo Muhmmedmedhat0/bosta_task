@@ -26,6 +26,9 @@
   "deliveryAddress": "عنوان التسليم",
   "anyProplem": "هل يوجد مشكلة",
   "callForProblem": "ابلاغ عن مشكلة",
-  "mainDeliveryAdrres": "امبابة شارع طلعت حرب مدينة العمل بجوار البرنس منزل 123 "
+  "mainDeliveryAdrres": "امبابة شارع طلعت حرب مدينة العمل بجوار البرنس منزل 123 ",
+  "DELIVERED" : "تم تسليم الشحنة",
+  "CANCELLED" : "تم الغاء الشحنة",
+  "DELIVERED_TO_SENDER" : "تم ارجاع الشحنة الى التاجر "
 
 }

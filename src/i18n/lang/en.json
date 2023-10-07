@@ -26,6 +26,10 @@
   "deliveryAddress": "Delivery Address",
   "anyProplem": "Any Problem",
   "callForProblem": "Report a Problem",
-  "mainDeliveryAdrres": "Imbaba, Talaat Harb Street, Labor City, next to the Prince, house 123"
+  "mainDeliveryAdrres": "Imbaba, Talaat Harb Street, Labor City, next to the Prince, house 123",
+  "DELIVERED" : "DELIVERED",
+  "CANCELLED" : "CANCELLED",
+  "DELIVERED_TO_SENDER" : "DELIVERED TO SENDER"
+
 
 }

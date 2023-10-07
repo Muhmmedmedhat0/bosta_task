@@ -35,10 +35,10 @@ export default function BasicTable({ shipmentData }: BasicTableProps) {
       <Table sx={{ minWidth: 650 }} aria-label="simple table">
         <TableHead sx={{backgroundColor: '#ddd'}} >
           <TableRow>
-            <TableCell align="right">{t('branch')}</TableCell>
-            <TableCell align="right">{t('date')}</TableCell>
-            <TableCell align="right">{t('time')}</TableCell>
-            <TableCell align="right">{t('details')}</TableCell>
+            <TableCell align="right" sx={{fontWeight: '300', fontSize: '1rem', }}>{t('branch')}</TableCell>
+            <TableCell align="right" sx={{fontWeight: '300', fontSize: '1rem', }}>{t('date')}</TableCell>
+            <TableCell align="right" sx={{fontWeight: '300', fontSize: '1rem', }}>{t('time')}</TableCell>
+            <TableCell align="right" sx={{fontWeight: '300', fontSize: '1rem', }}>{t('details')}</TableCell>
           </TableRow>
         </TableHead>
         <TableBody>
